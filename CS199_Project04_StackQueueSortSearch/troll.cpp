@@ -17,7 +17,7 @@ using std::endl;
 
 Troll::Troll()
 {
-	typeOf = "Troll";
+	type = "Troll";
 	numAttacks = 2;
 	strength = 60;
 }

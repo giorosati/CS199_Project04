@@ -9,6 +9,10 @@
 
 //includes
 #include "myStack.hpp"
+#include <iostream>
+
+using std::cout;
+using std::endl;
 
 myStack::myStack()				//default constructor
 {
@@ -23,6 +27,7 @@ Monster* myStack::peek()			//return top node
 	if (head != NULL)
 	{
 		return head->value;
+		cout << endl;
 	}
 
 }
@@ -38,15 +43,17 @@ void myStack::push(Monster* valueIn)	//add a node to the top of the list
 {
 	if (head == NULL)
 	{
-		head = new Node;
+		Node* newNode = new Node;
+		head = newNode;
 		head->value = valueIn;
 		head->next = NULL;
 	}
 	else
 	{
 		Node* newNode = new Node;
-		newNode->value - valueIn;
+		newNode->value = valueIn;
 		newNode->next = head;
 		head = newNode;
+		cout << endl;
 	}
 }

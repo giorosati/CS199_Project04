@@ -22,7 +22,7 @@ public:
 	~myQueue();					//deconstructor
 	Monster* peekFirst();		//return value of the node at the front of the queue
 	Monster* peekLast();		//return value of the node at the end of the queue
-	void enqueue();				//add node to teh end of the queue
+	void enqueue(Monster*);		//add node to teh end of the queue
 	void dequeue();				//remove node from the front of the queue
 };
 #endif

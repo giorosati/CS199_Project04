@@ -123,7 +123,7 @@
     <ClInclude Include="goblin.hpp" />
     <ClInclude Include="icedragon.hpp" />
     <ClInclude Include="monster.hpp" />
-    <ClInclude Include="myll.hpp" />
+    <ClInclude Include="myLL.hpp" />
     <ClInclude Include="myQueue.hpp" />
     <ClInclude Include="myStack.hpp" />
     <ClInclude Include="node.hpp" />
@@ -135,7 +135,7 @@
     <ClCompile Include="goblin.cpp" />
     <ClCompile Include="icedragon.cpp" />
     <ClCompile Include="monster.cpp" />
-    <ClCompile Include="myll.cpp" />
+    <ClCompile Include="myLL.cpp" />
     <ClCompile Include="myQueue.cpp" />
     <ClCompile Include="myStack.cpp" />
     <ClCompile Include="proj4.cpp" />

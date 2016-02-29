@@ -19,7 +19,6 @@ protected:
 
 public:
 	myStack();				//default constructor
-	myStack(Node*);			//constructor w/ node pointer
 	~myStack();				//deconstructor
 	Monster* peek();			//return top node
 	void pop();				//remove the top node

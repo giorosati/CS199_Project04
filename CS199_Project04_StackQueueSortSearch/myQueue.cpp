@@ -13,6 +13,7 @@
 #include <iostream>
 
 using std::cout;
+using std::endl;
 
 
 myQueue::myQueue()				//default constructor
@@ -31,7 +32,7 @@ Monster* myQueue::peekFirst()		//return value of the node at the front of the qu
 	}
 	else
 	{
-		std::cout << "the list is empty";
+		return NULL;
 	}
 }
 
@@ -48,18 +49,50 @@ Monster* myQueue::peekLast()		//return value of the node at the end of the queue
 	}
 	else
 	{
-		std::cout << "the list is empty";
+		return NULL;
 	}
 }
 
-void myQueue::enqueue()			//add node to teh end of the queue
+void myQueue::enqueue(Monster* mPointer)			//add node to the end of the queue
 {
-
-
+	if (head == NULL)
+	{
+		head = new Node;
+		head->value = mPointer;
+		head->next = NULL;
+	}
+	else
+	{
+		Node* tempNode = head;
+		while (tempNode->next != NULL)	//find last node
+		{
+			tempNode = tempNode->next;
+		}
+		Node* newNode = new Node;
+		newNode->value = mPointer;
+		newNode->next = NULL;
+		tempNode->next = newNode;
+	}
 }
+
 
 void myQueue::dequeue()			//remove node from the front of the queue
 {
-
-
+	if (head == NULL)
+	{}
+	else
+	{
+		if (head->next == NULL)		//case where only one node
+		{
+			Node* tempNode = head;
+			head = NULL;
+			delete tempNode;
+		}
+		else
+		{
+			Node* tempNode = head;
+			head = head->next;
+			delete tempNode;
+		}
+	}
 }

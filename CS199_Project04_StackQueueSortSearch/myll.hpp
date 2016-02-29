@@ -1,5 +1,5 @@
 /*********************************************************************
-** Program Filename: myll.hpp
+** Program Filename: myLL.hpp
 ** Author: Giovanni Rosati
 ** email: rosatig@oregonstate.edu
 ** Date: 2016-02-28

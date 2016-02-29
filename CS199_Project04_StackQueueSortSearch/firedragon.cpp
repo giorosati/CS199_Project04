@@ -18,7 +18,7 @@ using std::endl;
 
 FireDragon::FireDragon()
 {
-	typeOf = "Fire Dragon";
+	type = "Fire Dragon";
 	numAttacks = 4;
 	strength = 100;
 }

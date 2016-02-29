@@ -20,7 +20,7 @@ Monster::~Monster()
 	//cout << "monster deconstructor has run" << endl;;
 }
 
-string Monster::getTypeOf()
+string Monster::getType()
 {
-	return typeOf;
+	return type;
 }

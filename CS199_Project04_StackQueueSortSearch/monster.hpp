@@ -20,12 +20,12 @@ class Monster
 protected:
 	int strength;
 	int numAttacks;
-	string typeOf;
+	string type;
 
 public:
 	~Monster();						//deconstructor
 	virtual void attack() = 0;		//virtual attack()
-	string getTypeOf();				//function prototype
+	string getType();				//function prototype
 };
 
 #endif

@@ -18,7 +18,7 @@ using std::endl;
 
 IceDragon::IceDragon()
 {
-	typeOf = "Ice Dragon";
+	type = "Ice Dragon";
 	numAttacks = 4;
 	strength = 100;
 }

@@ -6,7 +6,7 @@
 ** Description: myLL class implementation file CS199_400 Project 4
 *********************************************************************/
 
-#include "myll.hpp"
+#include "myLL.hpp"
 #include "node.hpp"
 #include <cstdlib>
 #include <iostream>
@@ -47,11 +47,11 @@ void myLL::displayList()
 	{
 		cout << endl;
 		Node* tempNode = head;
-		cout << tempNode->value->getTypeOf() << endl;	//outputs monster name
+		cout << tempNode->value->getType() << endl;	//outputs monster name
 		while (tempNode->next != NULL)
 		{
 			tempNode = tempNode->next;						//set tempNode to the next node
-			cout << tempNode->value->getTypeOf() << endl;//outputs nodes after head
+			cout << tempNode->value->getType() << endl;//outputs nodes after head
 		}
 		cout << endl;
 	}
@@ -134,24 +134,39 @@ void myLL::removeLast()
 *********************************************************************/
 void myLL::sort()
 {
+	vector<Node*> nodes;
 	Node* tempNode = head;
-	Node* swapNode = NULL;
-	int temp;
+	while (tempNode != NULL)
+	{
+		nodes.push_back(tempNode);
+		tempNode = tempNode->next;
+	}
+
+	tempNode = nodes[0];
 	bool swap;
 	do
 	{
 		swap = false;
-		if (tempNode->value->getTypeOf() > tempNode->next->value->getTypeOf())
+		for (unsigned count = 0; count < nodes.size()-1; count++)
 		{
-			swapNode = tempNode->next;
-			tempNode->next = tempNode->next->next;
-			swapNode->next = tempNode;
-			swap = true;
+			if (nodes[count]->value->getType().at(0) > nodes[count + 1]->value->getType().at(0))
+			{
+				tempNode = nodes[count];
+				nodes[count] = nodes[count + 1];
+				nodes[count + 1] = tempNode;
+				swap = true;
+			}
 		}
 	} while (swap);
-	cout << endl;
-}
 
+	head = nodes[0];
+	head->next = nodes[1];
+	for (int i = 1; i < (nodes.size() - 1); i++)
+	{
+		nodes[i]->next = nodes[i + 1];
+	}
+	nodes[nodes.size() - 1]->next = NULL;
+}
 
 /*********************************************************************
 ** Function: search
@@ -170,7 +185,7 @@ bool myLL::search(string searchString)
 		Node* tempNode = head;
 		while (tempNode != NULL)
 		{
-			if (tempNode->value->getTypeOf() == searchString)
+			if (tempNode->value->getType() == searchString)
 			{
 				return true;
 			}

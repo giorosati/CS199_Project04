@@ -18,7 +18,7 @@ using std::string;
 
 Goblin::Goblin()
 {
-	typeOf = "Goblin";
+	type = "Goblin";
 	numAttacks = 1;
 	strength = 30;
 }
