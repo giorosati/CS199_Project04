@@ -3,21 +3,20 @@ OSU ID# 932510038
 rosatig@oregonstate.edu
 
 February 17, 2016
-Project 3 README
+Project 4 README
 CS_199_400_W2016
 
 
-The program can be compiled by typing “make” in the directory containing the uncompressed files from the rosatig.zip archive. 
+The program can be compiled by typing “make all” in the directory containing the uncompressed files from the rosatig.zip archive. 
 
-*****  Please use the proj3.cpp file in my zip file as I had to add the following so the attack
-functions work properly:
-#include <time.h> 
-srand(time(0));
+*****  Please use my included moster parent and derived classes.
 
-The makefile will look for the following files:
-proj3.cpp
+Make will look for the following files:
+proj4.cpp
+myLL.cpp
+myStack.cpp
+myQueue.cpp
 node.hpp
-myll.cpp
 monster.cpp
 dragon.cpp
 firedragon.cpp
@@ -27,18 +26,15 @@ troll.cpp
 
 and an executable file named “prog” will be created in the same directory. 
 
-Any object files that were created can be removed by typing.
 
 Three things I found difficult:
-1) Struggled with how to implement a Struct as part of a Class
+1) Sorting the linked lists
 2) Finding time to write descriptions for functions
-3) Creating a new project in Visual Studio that imports existing code
-from gitHub.
+3) Finding time to write descriptions for functions
 
 Three things I learned:
-1) How to use a struct within a class for a linked list
-2) How to create a new project in Visual Studio that imports existing code
-from gitHub.
-3) 
+1) How to sort a linked list using a vector
+2) How to use break points to analyze linked lists in Visual Studio
+3) How to implement "pop" and "push" on linked lists
 
 

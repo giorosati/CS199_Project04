@@ -29,6 +29,10 @@ Monster* myStack::peek()			//return top node
 		return head->value;
 		cout << endl;
 	}
+	else
+	{
+		return NULL;
+	}
 
 }
 

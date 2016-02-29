@@ -20,8 +20,8 @@ protected:
 public:
 	myStack();				//default constructor
 	~myStack();				//deconstructor
-	Monster* peek();			//return top node
+	Monster* peek();		//return top node
 	void pop();				//remove the top node
-	void push(Monster*);		//add a node to the top of the list
+	void push(Monster*);	//add a node to the top of the list
 };
 #endif
